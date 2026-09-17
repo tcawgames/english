@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <style>
-            body, html {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                background-color: #000;
-            }
-            #game {
-                width: 100%;
-                height: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="game"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonic The Hedgehog</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
+        #game {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="game"></div>
 
-        <script>
-            EJS_player = "#game";
-            EJS_core = "segaMD";
-            EJS_gameName = "Sonic The Hedgehog";
-            EJS_color = "#b9ffb8";
-            EJS_startOnLoaded = true;
+    <script>
+        EJS_player = "#game";
+        EJS_core = "segaMD";
+        EJS_gameName = "Sonic The Hedgehog";
+        EJS_color = "#b9ffb8";
+        EJS_startOnLoaded = true;
 
-            // Protocol-matching CDN path
-            EJS_pathtodata = "//cdn.emulatorjs.org/stable/data/";
+        // Protocol-relative CDN path
+        EJS_pathtodata = "//cdn.emulatorjs.org/stable/data/";
 
-            // Root-relative path pointing to your roms folder
-            EJS_gameUrl = "/english/roms/sonic1.zip";
-        </script>
-        <script src="//cdn.emulatorjs.org/stable/data/loader.js"></script>
-    </body>
+        // Root-relative path to your new zip file
+        EJS_gameUrl = "/english/roms/sonic.zip";
+    </script>
+    <script src="//cdn.emulatorjs.org/stable/data/loader.js"></script>
+</body>
 </html>
