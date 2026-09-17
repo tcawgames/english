@@ -29,15 +29,15 @@
         EJS_color = "#c8febe";
         EJS_startOnLoaded = true;
 
-        // CRITICAL FOR N64: Disable threads & force light core settings
+        // Force single-threading (fixes WebAssembly memory allocation crashes for N64)
         EJS_threads = false;
-        
-        // Uses the official stable data CDN
-        EJS_pathtodata = "//cdn.emulatorjs.org/stable/data/";
 
-        // Root-relative path to your unzipped .z64 file
+        // Switch CDN to jsDelivr mirror (fixes CORS/WASM loader blocks)
+        EJS_pathtodata = "https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@main/data/";
+
+        // Path to your raw .z64 file
         EJS_gameUrl = "/english/roms/sm64.z64";
     </script>
-    <script src="//cdn.emulatorjs.org/stable/data/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@main/data/loader.js"></script>
 </body>
 </html>
