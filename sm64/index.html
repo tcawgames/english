@@ -29,14 +29,14 @@
         EJS_color = "#c8febe";
         EJS_startOnLoaded = true;
 
-        // Force single-threading (fixes WebAssembly memory allocation crashes for N64)
+        // Disables multithreading to prevent memory allocation crashes on N64
         EJS_threads = false;
 
-        // Switch CDN to jsDelivr mirror (fixes CORS/WASM loader blocks)
+        // Uses CDN mirror for reliable WASM delivery
         EJS_pathtodata = "https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@main/data/";
 
-        // Path to your raw .z64 file
-        EJS_gameUrl = "/english/roms/sm64.z64";
+        // Absolute URL to eliminate all pathing issues
+        EJS_gameUrl = "http://blooket.webs.vc/english/roms/sm64.z64";
     </script>
     <script src="https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@main/data/loader.js"></script>
 </body>
