@@ -1,26 +1,40 @@
-<html>
-    <head>
-        <!--HTML file auto generated using EmulatorJS codehelper-->
-        <style>
-            body, html {
-                margin: 0;
-                padding: 0;
-            }
-        </style>
-    </head>
-    <body>
-        <div style="width:100%;height:100%;max-width:100%">
-            <div id="game"></div>
-        </div>
-        <script>
-            EJS_player = "#game";
-            EJS_core = "n64";
-            EJS_gameName = "SM64";
-            EJS_color = "#c8febe";
-            EJS_startOnLoaded = true;
-            EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
-            EJS_gameUrl = "english/roms/sm64.zip";
-        </script>
-        <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mario 64</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
+        #game {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="game"></div>
+
+    <script>
+        EJS_player = "#game";
+        EJS_core = "n64";
+        EJS_gameName = "SM64";
+        EJS_color = "#c8febe";
+        EJS_startOnLoaded = true;
+
+        // Protocol-matching CDN to prevent mixed content blocks
+        EJS_pathtodata = "//cdn.emulatorjs.org/stable/data/";
+
+        // Root-relative path pointing directly to english/roms/
+        EJS_gameUrl = "/english/roms/sm64.zip";
+    </script>
+    <script src="//cdn.emulatorjs.org/stable/data/loader.js"></script>
+</body>
 </html>
