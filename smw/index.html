@@ -29,13 +29,12 @@
         EJS_color = "#b9ffb8";
         EJS_startOnLoaded = true;
 
-        // CDN path for cores, assets, and engine components
-        EJS_pathtodata = "https://cdn.emulatorjs.org/stable/data/";
+        // Use GitHub/jsDelivr mirror to prevent network/CORS blocks on GitHub Pages
+        EJS_pathtodata = "https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@main/data/";
 
-        // Path to your local ROM file (must match exact relative location and case)
-        EJS_gameUrl = "roms/smw.sfc"; 
+        // Must point to a zipped ROM file inside your repo
+        EJS_gameUrl = "roms/smw.zip"; 
     </script>
-    <!-- Core script loader -->
-    <script src="https://cdn.emulatorjs.org/stable/data/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/emulatorjs/emulatorjs@main/data/loader.js"></script>
 </body>
 </html>
